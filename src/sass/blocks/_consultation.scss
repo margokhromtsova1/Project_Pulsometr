@@ -8,5 +8,13 @@
         font-size: 20px;
         font-weight: 500;
         text-align: left;
-    }  
+    } 
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        color: #fff;
+        border: none;
+        margin-bottom: 15px;
+    } 
 }
