@@ -3,7 +3,7 @@
     padding: 81px 0;
     margin: 0 auto;
     &__inner {
-        width: 750px;
+        max-width: 750px;
         margin: 0 auto;
     }
 }
@@ -27,41 +27,22 @@
 .slick-dots {
     display: flex;
     justify-content: center;
+    align-items: center;
+    list-style: none;
 }
-.slick-dots li {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
-}
-
-.slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
-
-.slick-dots li button:before {
-    content: '•';
-    font-size: 22px;
-    line-height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    opacity: .25;
-    color: black;
-}
+.slick-dots button {
+    background: rgba($color: #D3D3D3, $alpha: 0.56); // цвет фона
+    border: none; // без рамки
+    border-radius: 100%; // радиус закругления
+    height: 15px; // высота точки
+    width: 15px; // ширина точки
+    margin: 5px; // отступы между точками
+    outline: none; // убираем обводку 
+} 
+.slick-dots li[class="slick-active"] button {
+    background: $main-color;
+} 
+.slick-dots li button { 
+    font-size: 0; 
+ } 
+ 
